@@ -85,13 +85,19 @@ nav ul a:hover{text-decoration:underline;text-underline-offset:6px}
 .steps svg{width:52px;height:52px;margin-bottom:10px}
 .steps b{display:block;font-size:18px;margin-bottom:4px}
 .steps span{color:var(--mute);font-size:15px}
-.about .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center}
+.about .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start}
 .about h2{margin-bottom:14px}
 .about p{margin:0 0 12px;max-width:34em}
 .about .note{background:var(--band);border-radius:24px;padding:30px}
 .about .note h3{font-size:28px;margin-bottom:8px}
 .about .note ul{margin:0;padding-left:20px}
 .about .note li{margin:6px 0}
+.about .note h3{margin-bottom:16px}
+.rotina{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 24px}
+.rotina h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:22px;margin:0 0 6px}
+.rotina ul{margin:0;padding-left:20px}
+.dica{margin:18px 0 0;padding-top:14px;border-top:1px solid var(--line);font-size:15px;max-width:none}
+@media(max-width:520px){.rotina{grid-template-columns:minmax(0,1fr)}}
 footer{background:var(--ink);color:var(--accink)}
 footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:end}
 footer h2{font-size:clamp(36px,4.5vw,52px);margin-bottom:14px}
@@ -164,7 +170,7 @@ nav ul a{font-size:13.5px;white-space:nowrap}
   <div class="wrap">
     <div class="txt">
       <h1 id="titulo">Sua pele merece uma escolha especial.</h1>
-      <p id="subtitulo">Produtos selecionados para limpar, tratar e proteger a pele. Escolha os seus e faça o pedido direto pelo WhatsApp.</p>
+      <p id="subtitulo">Uma seleção especial de skincare coreano para cuidar, tratar e valorizar sua pele. Descubra seus favoritos e compre com facilidade pelo WhatsApp.</p>
       <a class="btn" href="#produtos">Ver produtos <span class="arrow" aria-hidden="true">→</span></a>
     </div>
     <div class="scene"><img src="fotos/hero-produtos.jpg" alt="Produtos de skincare sobre blocos de pedra" width="734" height="710"></div>
@@ -191,21 +197,27 @@ nav ul a{font-size:13.5px;white-space:nowrap}
 <section class="band how" id="como-pedir"><div class="wrap">
   <h2>Como fazer seu pedido</h2>
   <ol class="steps">
-    <li><svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="26" fill="var(--soft)"/><rect x="18" y="14" width="16" height="26" rx="5" fill="var(--acc)"/><rect x="21" y="9" width="10" height="7" rx="2" fill="var(--ink)"/></svg><b>Escolha os produtos</b><span>Toque em + para colocar na sacola. Dá para escolher vários de uma vez.</span></li>
-    <li><svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="26" fill="var(--soft)"/><path d="M14 22 h24 l-3 16 h-18z" fill="var(--acc)"/><path d="M20 22 c0-8 12-8 12 0" stroke="var(--ink)" stroke-width="3" fill="none"/></svg><b>Envie pelo WhatsApp</b><span>A mensagem já vai pronta com a lista e o total do pedido.</span></li>
-    <li><svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="26" fill="var(--soft)"/><rect x="12" y="18" width="20" height="16" rx="2" fill="var(--acc)"/><path d="M32 22 h6 l4 6 v6 h-10z" fill="var(--ink)"/><circle cx="18" cy="36" r="3" fill="var(--ink)"/><circle cx="36" cy="36" r="3" fill="var(--ink)"/></svg><b>Combine a entrega</b><span id="entrega">Retirada ou entrega a combinar. Pagamento por Pix ou dinheiro.</span></li>
+    <li><svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="26" fill="var(--soft)"/><rect x="18" y="14" width="16" height="26" rx="5" fill="var(--acc)"/><rect x="21" y="9" width="10" height="7" rx="2" fill="var(--ink)"/></svg><b>Escolha os produtos</b><span>Adicione seus produtos favoritos à sacola e escolha quantos desejar.</span></li>
+    <li><svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="26" fill="var(--soft)"/><path d="M14 22 h24 l-3 16 h-18z" fill="var(--acc)"/><path d="M20 22 c0-8 12-8 12 0" stroke="var(--ink)" stroke-width="3" fill="none"/></svg><b>Envie pelo WhatsApp</b><span>Finalize seu pedido pelo WhatsApp. Sua seleção e o valor total serão enviados automaticamente.</span></li>
+    <li><svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="26" fill="var(--soft)"/><rect x="12" y="18" width="20" height="16" rx="2" fill="var(--acc)"/><path d="M32 22 h6 l4 6 v6 h-10z" fill="var(--ink)"/><circle cx="18" cy="36" r="3" fill="var(--ink)"/><circle cx="36" cy="36" r="3" fill="var(--ink)"/></svg><b>Combine a entrega</b><span id="entrega">Escolha a melhor opção de recebimento: retirada ou entrega a combinar. Pagamento via Pix, dinheiro e cartão de crédito com a taxa da maquininha.</span></li>
   </ol>
 </div></section>
 
 <section class="band about"><div class="wrap">
   <div>
     <h2>Sobre a loja</h2>
-    <p id="sobre">Oi, eu sou a Mariana Guimarães. Na Auren Beauty você encontra skincare e produtos de beleza selecionados, com opções para cada tipo de pele, e eu te ajudo a montar a rotina certa.</p>
-    <p>Ficou em dúvida sobre qual escolher? Me chama no WhatsApp que eu te ajudo.</p>
+    <p id="sobre">Oi, meu nome é Mariana Guimarães! A Auren Beauty nasceu da minha paixão pelo universo do skincare coreano e do desejo de compartilhar produtos especiais para o cuidado com a pele.</p>
+    <p>Cada produto é escolhido com atenção, reunindo fórmulas e tecnologias para diferentes necessidades e rotinas de skincare.</p>
+    <p>Mais do que oferecer produtos, queremos ajudar você a encontrar escolhas que façam sentido para sua pele.</p>
+    <p>Ficou em dúvida? Conte com nosso atendimento pelo WhatsApp. Será um prazer ajudar você!</p>
   </div>
   <div class="note">
     <h3>Uma rotina simples</h3>
-    <ul><li><b>Manhã:</b> limpar, hidratar e aplicar protetor solar.</li><li><b>Noite:</b> limpar, aplicar o sérum e hidratar.</li><li>Teste produtos novos numa pequena área da pele antes de usar no rosto todo.</li></ul>
+    <div class="rotina">
+      <div><h4>Manhã</h4><ul><li>Limpar a pele.</li><li>Hidratar.</li><li>Finalizar com protetor solar.</li></ul></div>
+      <div><h4>Noite</h4><ul><li>Limpar a pele.</li><li>Aplicar os produtos de tratamento adequados à sua rotina.</li><li>Hidratar.</li></ul></div>
+    </div>
+    <p class="dica"><b>Dica Auren:</b> introduza novos produtos gradualmente e faça um teste de sensibilidade antes de utilizá-los no rosto.</p>
   </div>
 </div></section>
 </main>
